@@ -81,104 +81,98 @@ Leer opc;
 			Fin Para
 			Escribir "La suma de la matriz es: ",resta;
 		7:
-			Dimension matriz_a[2,2]
-			Dimension matriz_b[2,2]
-			Dimension 	matriz_suma[2,2]
-			Definir matriz_a, matriz_b, matriz_suma Como Entero
-			Definir e2, f2 Como Entero
-			Definir g2, h2 Como Entero
+			Definir n, matriz, matriz2, fila, columna, fila5, columna5, matriz_suma Como Entero
+			Escribir "Ingrese un número para el tamaño de las filas y columnas de la matriz";
+			Leer n
+			Dimension matriz[n,n];
+			Dimension matriz2[n,n]
+			Dimension 	matriz_suma[n,n]
 			
-			//Primera matriz
-			Para e2<-0 Hasta 1 Hacer
-				para f2<-0 Hasta 1 Hacer
-					Escribir "Ingrese el valor para la fila ",e2, " en columna ",f2
-					Leer matriz_a[e2,f2]
-				FinPara
-			FinPara
+			Para fila<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir "Ingrese numero para el tamaño de fila ",fila," y columna ",columna
+					Leer matriz[fila, columna];
+				Fin Para
+			Fin Para
 			Mostrar "La primera matriz es: "
-			Para e2<-0 Hasta 1 Hacer
-				para f2<-0 Hasta 1 Hacer
-					Escribir  matriz_a[e2,f2] "  " Sin Saltar;
-				FinPara
-				Escribir "   "
-			FinPara
+			Para fila<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir  Sin Saltar matriz[fila, columna], "   ";
+				Fin Para
+				Escribir "";
+			Fin Para
 			
-			//Segunda matriz
-			Para g2<-0 Hasta 1 Hacer
-				para h2<-0 Hasta 1 Hacer
-					Escribir "Ingrese el valor para la fila ",g2 , " en columna ",h2
-					Leer matriz_b[g2,h2]
-				FinPara
-			FinPara
+			Para fila5<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna5<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir "Ingrese numero para el tamaño de fila ",fila5 " y columna ",columna5
+					Leer matriz2[fila5, columna5];
+				Fin Para
+			Fin Para
 			Mostrar "La segunda matriz es: "
-			Para g2<-0 Hasta 1 Hacer
-				para h2<-0 Hasta 1 Hacer
-					Escribir  matriz_b[g2,h2] "  " Sin Saltar;
-				FinPara
-				Escribir "   "
-			FinPara
+			Para fila5<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna5<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir  Sin Saltar matriz2[fila5, columna5], "   ";
+				Fin Para
+				Escribir "";
+			Fin Para
 			
-			//Sumar las 2 matrices
-			Para e2<-0 Hasta 1 Hacer
-				para f2<-0 Hasta 1 Hacer
-					matriz_suma[e2,f2] = matriz_a[e2,f2] + matriz_b[e2,f2]
+			Para fila<-0 Hasta n - 1 Hacer
+				para columna<-0 Hasta n -1 Hacer
+					matriz_suma[fila,columna] = matriz[fila,columna] + matriz2[fila,columna]
 				FinPara
 			FinPara
 			Mostrar "La suma de las 2 matrices es: "
-			Para g2<-0 Hasta 1 Hacer
-				Para h2<-0 Hasta 1 Hacer
-					Escribir matriz_suma[g2,h2] "   " Sin Saltar;
+			Para fila5<-0 Hasta n - 1 Hacer
+				Para columna5<-0 Hasta n - 1 Hacer
+					Escribir matriz_suma[fila5,columna5] "   " Sin Saltar;
 				FinPara
 				Escribir "    "
 			FinPara
 		8:
-			Dimension matriz_a3[2,2]
-			Dimension matriz_b3[2,2]
-			Dimension 	matriz_suma3[2,2]
-			Definir matriz_a3, matriz_b3, matriz_suma3 Como Entero
-			Definir e2, f2 Como Entero
-			Definir g2, h2 Como Entero
+			Definir n, matriz, matriz2, fila, columna, fila5, columna5, matriz_resta Como Entero
+			Escribir "Ingrese un número para el tamaño de las filas y columnas de la matriz";
+			Leer n
+			Dimension matriz[n,n];
+			Dimension matriz2[n,n]
+			Dimension 	matriz_resta[n,n]
 			
-			//Primera matriz
-			Para e3<-0 Hasta 1 Hacer
-				para f3<-0 Hasta 1 Hacer
-					Escribir "Ingrese el valor para la fila ",e3 , " en columna ",f3
-					Leer matriz_a3[e3,f3]
-				FinPara
-			FinPara
+			Para fila<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir "Ingrese numero para el tamaño de fila ",fila," y columna ",columna
+					Leer matriz[fila, columna];
+				Fin Para
+			Fin Para
 			Mostrar "La primera matriz es: "
-			Para e3<-0 Hasta 1 Hacer
-				para f3<-0 Hasta 1 Hacer
-					Escribir  matriz_a3[e3,f3] "  " Sin Saltar;
-				FinPara
-				Escribir "   "
-			FinPara
+			Para fila<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir  Sin Saltar matriz[fila, columna], "   ";
+				Fin Para
+				Escribir "";
+			Fin Para
 			
-			//Segunda matriz
-			Para g3<-0 Hasta 1 Hacer
-				para h3<-0 Hasta 1 Hacer
-					Escribir "Ingrese el valor para la fila ",g3 , " en columna ",h3
-					Leer matriz_b3[g3,h3]
-				FinPara
-			FinPara
+			Para fila5<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna5<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir "Ingrese numero para el tamaño de fila ",fila5 " y columna ",columna5
+					Leer matriz2[fila5, columna5];
+				Fin Para
+			Fin Para
 			Mostrar "La segunda matriz es: "
-			Para g3<-0 Hasta 1 Hacer
-				para h3<-0 Hasta 1 Hacer
-					Escribir  matriz_b3[g3,h3] "  " Sin Saltar;
-				FinPara
-				Escribir "   "
-			FinPara
+			Para fila5<-0 Hasta n - 1 Con Paso 1 Hacer
+				Para columna5<-0 Hasta n - 1 Con Paso 1 Hacer
+					Escribir  Sin Saltar matriz2[fila5, columna5], "   ";
+				Fin Para
+				Escribir "";
+			Fin Para
 			
-			//Sumar las 2 matrices
-			Para e3<-0 Hasta 1 Hacer
-				para f3<-0 Hasta 1 Hacer
-					matriz_suma3[e3,f3] = matriz_a3[e3,f3] - matriz_b3[e3,f3]
+			Para fila<-0 Hasta n - 1 Hacer
+				para columna<-0 Hasta n -1 Hacer
+					matriz_resta[fila,columna] = matriz[fila,columna] - matriz2[fila,columna]
 				FinPara
 			FinPara
 			Mostrar "La resta de las 2 matrices es: "
-			Para g3<-0 Hasta 1 Hacer
-				Para h3<-0 Hasta 1 Hacer
-					Escribir matriz_suma3[g3,h3] "   " Sin Saltar;
+			Para fila5<-0 Hasta n - 1 Hacer
+				Para columna5<-0 Hasta n - 1 Hacer
+					Escribir matriz_resta[fila5,columna5] "   " Sin Saltar;
 				FinPara
 				Escribir "    "
 			FinPara
